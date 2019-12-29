@@ -20,12 +20,10 @@ class RegistroController extends AbstractController
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             $em = $this->getDoctrine()->getManager();
-            $user->setBaneado(false);
-            $user->setRoles(['ROLE_USER']);
             $user->setPassword($passwordEncoder->encodePassword($user,$form['password']->getData()));
             $em->persist($user);
             $em->flush();
-            $this->addFlash('exito','Se ha registrado exitosamente');
+            $this->addFlash('exito',User::REGISTRO_EXITOSO);
             return $this->redirectToRoute('registro');
         }
         return $this->render('registro/index.html.twig', [

@@ -10,6 +10,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class User implements UserInterface
 {
+    const REGISTRO_EXITOSO = 'Se ha registrado exitosamente';
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -51,6 +53,7 @@ class User implements UserInterface
     private $comentarios;
 
 
+
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Posts", mappedBy="user")
      */
@@ -60,6 +63,15 @@ class User implements UserInterface
      * @ORM\OneToMany(targetEntity="App\Entity\Profesion", mappedBy="user")
      */
     private $profesion;
+
+    /**
+     * User constructor.
+     */
+    public function __construct()
+    {
+        $this->baneado = false;
+        $this->roles = ['ROLE_USER'];
+    }
 
 
     public function getId(): ?int
