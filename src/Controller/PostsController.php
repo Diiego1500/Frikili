@@ -21,25 +21,19 @@ class PostsController extends AbstractController
         $form = $this->createForm(PostsType::class, $post);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            $brochureFile = $form['foto']->getData();
-            if ($brochureFile) {
-                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
-                // this is needed to safely include the file name as part of the URL
+            $File = $form['foto']->getData();
+            if ($File) {
+                $originalFilename = pathinfo($File->getClientOriginalName(), PATHINFO_FILENAME);
                 $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
-                $newFilename = $safeFilename.'-'.uniqid().'.'.$brochureFile->guessExtension();
-
-                // Move the file to the directory where brochures are stored
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$File->guessExtension();
                 try {
-                    $brochureFile->move(
-                        $this->getParameter('brochures_directory'),
+                    $File->move(
+                        $this->getParameter('photos_directory'),
                         $newFilename
                     );
                 } catch (FileException $e) {
                    throw new \Exception('UPs! ha ocurrido un error, sorry :c');
                 }
-
-                // updates the 'brochureFilename' property to store the PDF file name
-                // instead of its contents
                 $post->setFoto($newFilename);
             }
             $user = $this->getUser();
