@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2733baa-c346-43a2-bb61-055e8849010f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/posts/MisPosts.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/posts/verPost.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/remachinescript_personal_use-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/remachinescript_personal_use-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/signika-bold-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/signika-bold-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/signika-regular-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/signika-regular-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/UI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/posts/MisPosts.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/MisPosts.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/posts/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/posts/verPost.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/verPost.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registro/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,6 +154,16 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/fonts" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/fonts" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/img" />
+      <recent name="$PROJECT_DIR$/public/js" />
+      <recent name="$PROJECT_DIR$/public/css" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -168,7 +193,8 @@
       <workItem from="1577134505888" duration="598000" />
       <workItem from="1577741711349" duration="2087000" />
       <workItem from="1577751741179" duration="8827000" />
-      <workItem from="1577761457663" duration="286000" />
+      <workItem from="1577761457663" duration="5070000" />
+      <workItem from="1577805013768" duration="2980000" />
     </task>
     <servers />
   </component>

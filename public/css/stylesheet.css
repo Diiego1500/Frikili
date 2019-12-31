@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'signikabold';
+    src: url('../fonts/signika-bold-webfont.woff2') format('woff2'),
+         url('../fonts/signika-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'signikaregular';
+    src: url('../fonts/signika-regular-webfont.woff2') format('woff2'),
+    url('../fonts/signika-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'remachine_script_personal_uRg';
+    src: url('../fonts/remachinescript_personal_use-webfont.woff2') format('woff2'),
+    url('../fonts/remachinescript_personal_use-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-image: url("../img/UI.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: signikaregular;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: signikabold;
+}
+
+nav{
+    background-color: #f65c78 !important;
+    font-family: signikabold;
+    font-size: 1.5em;
+}
+
+.navbar-brand{
+    font-family: remachine_script_personal_uRg;
+    font-size: 2em;
+    color: #ffd271 !important;
+}
+
+.nav-link{
+    color: #ffd271 !important;
+}

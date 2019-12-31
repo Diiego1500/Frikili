@@ -3,6 +3,7 @@
 {% block title %}Hello RegistroController!{% endblock %}
 
 {% block body %}
+    {{ parent() }}
     {% for message in app.flashes('exito') %}
         <div class="alert alert-success">
             {{ message }}

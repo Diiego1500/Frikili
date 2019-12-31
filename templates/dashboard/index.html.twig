@@ -3,6 +3,7 @@
 {% block title %}Hello DashboardController!{% endblock %}
 
 {% block body %}
+    {{ parent() }}
     <div class="count">
         {{ pagination.getTotalItemCount }}
     </div>
