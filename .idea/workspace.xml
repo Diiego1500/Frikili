@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2733baa-c346-43a2-bb61-055e8849010f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Frikili.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Frikili.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Posts.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,6 +162,8 @@
       <workItem from="1577035204050" duration="623000" />
       <workItem from="1577058206942" duration="7825000" />
       <workItem from="1577134505888" duration="598000" />
+      <workItem from="1577741711349" duration="2087000" />
+      <workItem from="1577751741179" duration="2947000" />
     </task>
     <servers />
   </component>
