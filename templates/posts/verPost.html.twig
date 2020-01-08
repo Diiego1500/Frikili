@@ -2,5 +2,27 @@
 {% block title %}Mis posts{% endblock %}
 {% block body %}
     {{ parent() }}
-    {{ dump(post) }}
+    <div class="container bg-white rounded my-3 p-4">
+        <div class="d-flex bd-highlight">
+            <div class="p-2 flex-grow-1 bd-highlight">
+                <h3>{{post.titulo}}</h3>
+                <div class="my-3" style="color:#3282b8;">
+                    <i class="fa fa-thumbs-up"></i><strong> # Likes</strong>
+                </div>
+                <div style="color:#c3f584;">
+                    <i class="far fa-clock"></i> <strong>Fecha de publicación: {{ post.fechapublicacion | date }}</strong>
+                </div>
+            </div>
+            <div class="p-2 bd-highlight">
+                <div class="align-self-center">
+                    <img class="rounded" src="{{ asset('uploads/photos/'~post.foto) }}" width="150px">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="text-justify my-3">
+            {{ post.contenido }}
+        </div>
+    </div>
+
 {% endblock %}
