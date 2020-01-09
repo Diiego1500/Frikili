@@ -2,8 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Comentarios;
 use App\Entity\Posts;
+use App\Form\ComentarioType;
 use App\Form\PostsType;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -51,10 +54,28 @@ class PostsController extends AbstractController
     /**
      * @Route("/post/{id}", name="VerPost")
      */
-    public function VerPost($id){
+    public function VerPost($id, Request $request, PaginatorInterface $paginator){
         $em = $this->getDoctrine()->getManager();
+        $comentario = new Comentarios();
         $post = $em->getRepository(Posts::class)->find($id);
-        return $this->render('posts/verPost.html.twig',['post'=>$post]);
+        $queryComentarios = $em->getRepository(Comentarios::class)->BuscarComentariosDeUNPost($post->getId());
+        $form = $this->createForm(ComentarioType::class, $comentario);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $user = $this->getUser();
+            $comentario->setPosts($post);
+            $comentario->setUser($user);
+            $em->persist($comentario);
+            $em->flush();
+            $this->addFlash('Exito', Comentarios::COMENTARIO_AGREGADO_EXITOSAMENTE);
+            return $this->redirectToRoute('VerPost',['id'=>$post->getId()]);
+        }
+        $pagination = $paginator->paginate(
+            $queryComentarios, /* query NOT result */
+            $request->query->getInt('page', 1), /*page number*/
+            20 /*limit per page*/
+        );
+        return $this->render('posts/verPost.html.twig',['post'=>$post, 'form'=>$form->createView(), 'comentarios'=>$pagination]);
     }
 
     /**

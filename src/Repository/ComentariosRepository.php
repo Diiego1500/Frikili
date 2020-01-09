@@ -19,6 +19,30 @@ class ComentariosRepository extends ServiceEntityRepository
         parent::__construct($registry, Comentarios::class);
     }
 
+    public function BuscarComentarios($id_user){
+        return $this->getEntityManager()
+            ->createQuery('
+                SELECT comentario.id, post.titulo, post.id
+                FROM App:Comentarios comentario
+                JOIN comentario.posts post
+                WHERE comentario.user =:user_id
+            ')
+            ->setParameter('user_id',$id_user)
+            ->setMaxResults(10)
+            ->getResult();
+    }
+
+    public function BuscarComentariosDeUNPost($post_id){
+        return $this->getEntityManager()
+            ->createQuery('
+                SELECT comentario.comentario, user.nombre
+                FROM App:Comentarios comentario
+                JOIN comentario.user user
+                WHERE comentario.posts =:post_id
+            ')
+            ->setParameter('post_id',$post_id);
+    }
+
     // /**
     //  * @return Comentarios[] Returns an array of Comentarios objects
     //  */

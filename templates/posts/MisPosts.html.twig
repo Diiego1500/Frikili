@@ -2,5 +2,18 @@
 {% block title %}Mis posts{% endblock %}
 {% block body %}
     {{ parent() }}
-    {{ dump(posts) }}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% for post in posts %}
+                    <div class="bg-white rounded p-3 my-3" onclick="window.location.href='{{ path('VerPost',{id:post.id}) }}'" style="cursor: pointer">
+                        <h3>{{ post.titulo }}</h3>
+                        <div class="my-3 bg-yellow"> <i class="fa fa-user"></i><strong> Creado por {{post.user.nombre}}</strong></div>
+                        <div class=" bg-green"><i class="far fa-clock"></i> <strong>Fecha de publicación: {{ post.fechapublicacion | date }}</strong></div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
 {% endblock %}

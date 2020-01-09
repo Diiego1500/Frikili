@@ -27,7 +27,9 @@ body {
     background-image: url("../img/UI.png");
     background-repeat: no-repeat;
     background-size: 100%;
+    background-attachment: fixed;
     font-family: signikaregular;
+
 
 }
 
