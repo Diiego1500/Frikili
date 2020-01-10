@@ -8,6 +8,7 @@ use App\Form\ComentarioType;
 use App\Form\PostsType;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
@@ -86,5 +87,24 @@ class PostsController extends AbstractController
         $user = $this->getUser();
         $posts = $em->getRepository(Posts::class)->findBy(['user'=>$user]);
         return $this->render('posts/MisPosts.html.twig',['posts'=>$posts]);
+    }
+
+    /**
+     * @Route("/Likes", options={"expose"=true}, name="Likes")
+     */
+    public function Like(Request $request){
+        if($request->isXmlHttpRequest()){
+            $em = $this->getDoctrine()->getManager();
+            $user = $this->getUser();
+            $id = $request->request->get('id');
+            $post = $em->getRepository(Posts::class)->find($id);
+            $likes = $post->getLikes();
+            $likes .= $user->getId().',';
+            $post->setLikes($likes);
+            $em->flush();
+            return new JsonResponse(['likes'=>$likes]);
+        }else{
+            throw new \Exception('Estás tratando de hackearme?');
+        }
     }
 }
