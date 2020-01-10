@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a2733baa-c346-43a2-bb61-055e8849010f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/posts/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registro/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +182,8 @@
       <workItem from="1577761457663" duration="5070000" />
       <workItem from="1577805013768" duration="2980000" />
       <workItem from="1578419844497" duration="6180000" />
-      <workItem from="1578664532003" duration="2532000" />
+      <workItem from="1578664532003" duration="4328000" />
+      <workItem from="1578678094565" duration="802000" />
     </task>
     <servers />
   </component>
