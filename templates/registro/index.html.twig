@@ -3,11 +3,19 @@
 {% block title %}Hello RegistroController!{% endblock %}
 
 {% block body %}
-    {{ parent() }}
     {% for message in app.flashes('exito') %}
         <div class="alert alert-success">
             {{ message }}
         </div>
     {% endfor %}
-    {{ form(formulario) }}
+    <div class="container h-100 ">
+        <div class="row h-100 justify-content-center align-items-center ">
+            <div class="col-6 bg-white rounded my-3 p-5">
+                <h1>Registro</h1>
+                {{ form(formulario) }}
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}

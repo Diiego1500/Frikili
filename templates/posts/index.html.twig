@@ -4,5 +4,13 @@
 
 {% block body %}
     {{ parent() }}
-{{ form(form) }}
+    <div class="container h-100 ">
+        <div class="row h-100 justify-content-center align-items-center ">
+            <div class="col-10 bg-white rounded my-3 p-5">
+                <h1>Registrar Posts</h1>
+                {{ form(form) }}
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
