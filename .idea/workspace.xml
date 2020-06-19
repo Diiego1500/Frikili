@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2733baa-c346-43a2-bb61-055e8849010f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Frikili.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Frikili.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a2733baa-c346-43a2-bb61-055e8849010f" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +174,7 @@
       <workItem from="1578419844497" duration="6180000" />
       <workItem from="1578664532003" duration="4328000" />
       <workItem from="1578678094565" duration="802000" />
-      <workItem from="1592588088414" duration="653000" />
+      <workItem from="1592588088414" duration="955000" />
     </task>
     <servers />
   </component>
